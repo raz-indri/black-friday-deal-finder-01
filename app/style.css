@@ -1,0 +1,329 @@
+/* Bargain Beacon — original design: deep navy, warm amber, paper-white cards. */
+
+:root {
+  --navy: #14213d;
+  --navy-deep: #0d1626;
+  --amber: #f4a900;
+  --amber-soft: #fff3d6;
+  --paper: #f6f4ef;
+  --card: #ffffff;
+  --ink: #1c2333;
+  --muted: #5b6474;
+  --line: #e2ded4;
+  --green: #1e7d46;
+  --green-soft: #e2f3e8;
+  --red: #b3261e;
+}
+
+* { box-sizing: border-box; }
+
+body {
+  margin: 0;
+  background: var(--paper);
+  color: var(--ink);
+  font-family: "Avenir Next", "Segoe UI", system-ui, -apple-system, sans-serif;
+  line-height: 1.45;
+}
+
+.masthead {
+  background: var(--navy-deep);
+  color: #fff;
+  border-bottom: 5px solid var(--amber);
+}
+
+.masthead-inner {
+  max-width: 1180px;
+  margin: 0 auto;
+  padding: 30px 20px 26px;
+}
+
+.kicker {
+  margin: 0 0 4px;
+  color: var(--amber);
+  font-size: 0.8rem;
+  font-weight: 700;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+}
+
+.masthead h1 {
+  margin: 0;
+  font-size: 2.4rem;
+  line-height: 1.05;
+  letter-spacing: -0.02em;
+}
+
+.tagline {
+  margin: 8px 0 0;
+  max-width: 640px;
+  font-size: 1.05rem;
+  color: #d7dce6;
+}
+
+.checked-line {
+  margin: 12px 0 0;
+  font-size: 0.85rem;
+  color: #9fb0c8;
+}
+
+main {
+  max-width: 1180px;
+  margin: 0 auto;
+  padding: 0 20px 30px;
+}
+
+.stats {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 12px;
+  margin: 18px 0;
+}
+
+.stat {
+  flex: 1 1 140px;
+  background: var(--card);
+  border: 1px solid var(--line);
+  border-radius: 10px;
+  padding: 12px 16px;
+}
+
+.stat b {
+  display: block;
+  font-size: 1.5rem;
+  color: var(--navy);
+}
+
+.stat span {
+  font-size: 0.82rem;
+  color: var(--muted);
+}
+
+.controls {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  align-items: end;
+  background: var(--card);
+  border: 1px solid var(--line);
+  border-radius: 10px;
+  padding: 14px;
+  margin-bottom: 10px;
+}
+
+.control {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+  font-size: 0.8rem;
+  font-weight: 600;
+  color: var(--muted);
+}
+
+.control input[type="search"],
+.control select {
+  font: inherit;
+  color: var(--ink);
+  background: #fff;
+  border: 1px solid #c9c4b8;
+  border-radius: 7px;
+  padding: 8px 10px;
+  min-width: 150px;
+}
+
+.search-control { flex: 2 1 240px; }
+.search-control input { width: 100%; }
+
+.check-control {
+  flex-direction: row;
+  align-items: center;
+  gap: 7px;
+  padding-bottom: 9px;
+  color: var(--ink);
+}
+
+.result-count {
+  margin: 4px 2px 14px;
+  font-size: 0.9rem;
+  color: var(--muted);
+}
+
+.deal-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 14px;
+}
+
+.deal {
+  display: flex;
+  flex-direction: column;
+  background: var(--card);
+  border: 1px solid var(--line);
+  border-radius: 12px;
+  padding: 16px;
+  position: relative;
+}
+
+.deal-top {
+  display: flex;
+  justify-content: space-between;
+  align-items: baseline;
+  gap: 8px;
+  margin-bottom: 6px;
+}
+
+.deal-store {
+  font-size: 0.78rem;
+  font-weight: 700;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+  color: var(--navy);
+}
+
+.deal-category {
+  font-size: 0.78rem;
+  color: var(--muted);
+}
+
+.deal h2 {
+  margin: 0 0 4px;
+  font-size: 1.06rem;
+  line-height: 1.25;
+}
+
+.deal-blurb {
+  margin: 0 0 12px;
+  font-size: 0.86rem;
+  color: var(--muted);
+}
+
+.price-row {
+  display: flex;
+  align-items: baseline;
+  gap: 9px;
+  flex-wrap: wrap;
+}
+
+.sale-price {
+  font-size: 1.6rem;
+  font-weight: 800;
+  color: var(--navy);
+}
+
+.usual-price {
+  font-size: 0.95rem;
+  color: var(--muted);
+  text-decoration: line-through;
+}
+
+.discount-pill {
+  margin-left: auto;
+  background: var(--amber);
+  color: var(--navy-deep);
+  font-weight: 800;
+  font-size: 0.85rem;
+  border-radius: 999px;
+  padding: 3px 10px;
+}
+
+.save-line {
+  margin: 4px 0 10px;
+  font-size: 0.86rem;
+  color: var(--green);
+  font-weight: 600;
+}
+
+.badge {
+  display: inline-block;
+  font-size: 0.74rem;
+  font-weight: 800;
+  letter-spacing: 0.05em;
+  text-transform: uppercase;
+  border-radius: 5px;
+  padding: 3px 8px;
+  margin-bottom: 8px;
+}
+
+.badge-new-low { background: var(--green-soft); color: var(--green); }
+.badge-strong { background: #e3edf9; color: #1d4e89; }
+.badge-routine { background: var(--amber-soft); color: #7a5200; }
+.badge-modest { background: #f3e2e0; color: var(--red); }
+
+.evidence {
+  margin: 0 0 12px;
+  font-size: 0.86rem;
+  color: var(--ink);
+}
+
+.checked {
+  margin: 0 0 14px;
+  font-size: 0.78rem;
+  color: var(--muted);
+}
+
+.store-link {
+  margin-top: auto;
+  display: block;
+  text-align: center;
+  background: var(--navy);
+  color: #fff;
+  font-weight: 700;
+  text-decoration: none;
+  border-radius: 8px;
+  padding: 10px;
+}
+
+.store-link:hover { background: #1e3358; }
+
+.empty {
+  background: var(--card);
+  border: 1px dashed #c9c4b8;
+  border-radius: 10px;
+  padding: 26px;
+  text-align: center;
+  color: var(--muted);
+}
+
+.method {
+  margin-top: 28px;
+  background: var(--card);
+  border: 1px solid var(--line);
+  border-radius: 12px;
+  padding: 18px 22px;
+}
+
+.method h2 {
+  margin: 0 0 10px;
+  font-size: 1.1rem;
+}
+
+.method ul {
+  margin: 0 0 10px;
+  padding-left: 20px;
+}
+
+.method li { margin-bottom: 6px; }
+.method p { margin: 0; color: var(--muted); font-size: 0.92rem; }
+
+footer {
+  border-top: 1px solid var(--line);
+  padding: 18px 20px 26px;
+  text-align: center;
+  color: var(--muted);
+  font-size: 0.85rem;
+}
+
+footer p { max-width: 720px; margin: 0 auto; }
+
+@media (max-width: 900px) {
+  .deal-grid { grid-template-columns: repeat(2, 1fr); }
+}
+
+@media (max-width: 560px) {
+  .masthead h1 { font-size: 1.9rem; }
+  .deal-grid { grid-template-columns: 1fr; }
+  .control input[type="search"],
+  .control select { min-width: 0; width: 100%; }
+  .control { flex: 1 1 100%; }
+  .search-control { flex-basis: 100%; }
+  .check-control { flex-basis: 100%; }
+}

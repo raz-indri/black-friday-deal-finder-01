@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Bargain Beacon — Black Friday 2026 deal finder</title>
+<meta name="description" content="Real Black Friday and Cyber Monday deals, checked 27 Nov 2026: price, usual price, discount and an honest signal on whether each one is really a deal.">
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+<header class="masthead">
+  <div class="masthead-inner">
+    <p class="kicker">Black Friday &amp; Cyber Monday 2026</p>
+    <h1>Bargain Beacon</h1>
+    <p class="tagline">Real deals, checked by hand — sale price, usual price, and an honest call on whether each one is actually a bargain.</p>
+    <p class="checked-line">Every price on this page was read on <strong>27 Nov 2026</strong> from the named store or a named deals source. Prices move fast — confirm at checkout.</p>
+  </div>
+</header>
+
+<main>
+  <section class="stats" id="stats" aria-label="Sale summary"></section>
+
+  <section class="controls" aria-label="Search and filters">
+    <label class="control search-control">
+      <span>Search</span>
+      <input type="search" id="search" placeholder="Try “headphones”, “OLED”, “Dyson”…">
+    </label>
+    <label class="control">
+      <span>Category</span>
+      <select id="category">
+        <option value="">All categories</option>
+      </select>
+    </label>
+    <label class="control">
+      <span>Store</span>
+      <select id="store">
+        <option value="">All stores</option>
+      </select>
+    </label>
+    <label class="control">
+      <span>Discount</span>
+      <select id="min-discount">
+        <option value="0">Any discount</option>
+        <option value="20">20% off or more</option>
+        <option value="40">40% off or more</option>
+        <option value="50">50% off or more</option>
+      </select>
+    </label>
+    <label class="control">
+      <span>Sort by</span>
+      <select id="sort">
+        <option value="discount">Biggest discount first</option>
+        <option value="saving">Biggest saving first</option>
+        <option value="price-low">Lowest price first</option>
+        <option value="price-high">Highest price first</option>
+      </select>
+    </label>
+    <label class="control check-control">
+      <input type="checkbox" id="new-lows-only">
+      <span>New lows only</span>
+    </label>
+  </section>
+
+  <p class="result-count" id="result-count" aria-live="polite"></p>
+
+  <section class="deal-grid" id="deal-grid" aria-label="Deals"></section>
+
+  <p class="empty" id="empty" hidden>No deals match those filters. Try clearing the search or lowering the discount.</p>
+
+  <section class="method">
+    <h2>How the signal works</h2>
+    <ul>
+      <li><span class="badge badge-new-low">New low</span> — the lowest price the store or a price tracker has shown for it.</li>
+      <li><span class="badge badge-strong">Strong price</span> — a deep cut on a good product, close to its lowest price.</li>
+      <li><span class="badge badge-routine">Worth a look</span> — a real cut, but small, or the “usual” price was recently raised.</li>
+      <li><span class="badge badge-modest">Modest cut</span> — barely a discount; only buy it if you wanted it anyway.</li>
+    </ul>
+    <p>Each card shows where its price was read and when. Nothing here is a guess: if a price could not be verified, the product is not listed.</p>
+  </section>
+</main>
+
+<footer>
+  <p>Bargain Beacon — an independent deal finder for Black Friday 2026. Prices were checked 27 Nov 2026 and can change; the store's page at checkout is the final word.</p>
+</footer>
+
+<script type="module" src="app.js"></script>
+</body>
+</html>
